@@ -12,7 +12,6 @@ const Header = () => {
         <div className="w-1/3">
           <Input
             placeholder="Search for something here..."
-            rounded="lg"
             prefix={<MagnifyingGlass size={20} />}
           />
         </div>
