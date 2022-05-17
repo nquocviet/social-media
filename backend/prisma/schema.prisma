@@ -1,0 +1,76 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextIndex"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                  String    @id @default(auto()) @map("_id") @db.ObjectId
+  email               String    @unique
+  password            String
+  fullName            String
+  birthday            String
+  sex                 Int
+  location            String?
+  website             String?
+  bio                 String?
+  work                String?
+  phoneNumber         String?
+  coverUrl            String?
+  profilePictureUrl   String?
+  relationshipStatus  Int?
+  posts               Post[]
+  comments            Comment[]
+  likes               Like[]
+  followedBy          User[]    @relation("UserFollows", fields: [followedByIDs], references: [id])
+  followedByIDs       String[]  @db.ObjectId
+  following           User[]    @relation("UserFollows", fields: [followingIDs], references: [id])
+  followingIDs        String[]  @db.ObjectId
+  isActive            Boolean   @default(true)
+  isBlocked           Boolean   @default(false)
+  reportReceived      Int       @default(0)
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+}
+
+model Post {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  slug            String    @unique
+  body            String
+  comments        Comment[]
+  likes           Like[]
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId          String    @db.ObjectId
+  visibleStatus   Int
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Comment {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId       String     @db.ObjectId
+  post         Post       @relation(fields: [postId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  postId       String
+  referenceId  String
+  comment      String
+  likes        Like[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model Like {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId       String     @db.ObjectId
+  post         Post       @relation(fields: [postId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  postId       String     @db.ObjectId
+  comment      Comment    @relation(fields: [commentId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  commentId    String     @db.ObjectId
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
