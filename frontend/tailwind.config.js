@@ -1,5 +1,9 @@
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './page-components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     screens: {
       xs: '536px',
@@ -102,6 +106,9 @@ module.exports = {
           800: 'var(--green-800)',
           900: 'var(--green-900)',
         },
+      },
+      width: {
+        avatar: 'var(--avatar-size)',
       },
       zIndex: {
         negative: 'var(--z-negative)',
