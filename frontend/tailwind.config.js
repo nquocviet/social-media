@@ -1,3 +1,22 @@
+const plugin = require('tailwindcss/plugin')
+
+const rotateX = plugin(function ({ addUtilities }) {
+  addUtilities({
+    '.rotate-x-45': {
+      transform: 'rotateX(45deg)',
+    },
+    '.rotate-x-90': {
+      transform: 'rotateX(90deg)',
+    },
+    '.rotate-x-135': {
+      transform: 'rotateX(135deg)',
+    },
+    '.rotate-x-180': {
+      transform: 'rotateX(180deg)',
+    },
+  })
+})
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -109,6 +128,10 @@ module.exports = {
       },
       width: {
         avatar: 'var(--avatar-size)',
+        checkbox: 'var(--checkbox-size)',
+      },
+      height: {
+        checkbox: 'var(--checkbox-size)',
       },
       zIndex: {
         negative: 'var(--z-negative)',
@@ -123,6 +146,7 @@ module.exports = {
     },
   },
   plugins: [
+    rotateX,
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
   ],

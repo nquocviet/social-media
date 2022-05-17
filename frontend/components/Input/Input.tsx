@@ -26,8 +26,8 @@ type TInputProps = {
 
 const inputSizes = {
   sm: 'px-3 py-1.5',
-  md: 'px-3.5 py-2',
-  lg: 'px-4 py-2.5',
+  md: 'px-3.5 py-2.5',
+  lg: 'px-4 py-3',
 }
 
 const inputRounded = {
@@ -42,7 +42,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
     {
       type = 'text',
       size = 'md',
-      rounded = 'md',
+      rounded = 'lg',
       label,
       placeholder,
       className,
@@ -63,7 +63,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
       inputRounded[rounded],
       className,
       !readOnly &&
-        'focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-100'
+        'focus-within:border-primary-500 focus-within:ring-4 focus-within:ring-primary-100'
     )
     const [showPassword, setShowPassword] = useState<boolean>(false)
     const isInputPassword = type === 'password'
@@ -116,7 +116,6 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
             )}
           </div>
         </label>
-        {/* {error && <Error className="absolute top-full pt-0.5">{error}</Error>} */}
       </div>
     )
   }
