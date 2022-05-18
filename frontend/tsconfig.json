@@ -2,13 +2,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"],
-      "@hooks/*": ["hooks/*"],
-      "@page-components/*": ["page-components/*"],
-      "@pages/*": ["pages/*"],
-      "@public/*": ["public/*"],
-      "@styles/*": ["styles/*"],
-      "@types/*": ["types/*"]
+      "@/components/*": ["components/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/page-components/*": ["page-components/*"],
+      "@/pages/*": ["pages/*"],
+      "@/public/*": ["public/*"],
+      "@/styles/*": ["styles/*"],
+      "@/types/*": ["types/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

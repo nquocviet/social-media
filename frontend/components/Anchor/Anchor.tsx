@@ -15,7 +15,8 @@ const Anchor = ({
   children,
   target = '_self',
 }: TAnchorProps) => {
-  const defaultClassName = 'text-primary-600 hover:text-primary-700'
+  const defaultClassName =
+    'inline-flex items-center text-primary-600 hover:text-primary-700'
   const allClassNames = clsx(defaultClassName, className)
 
   return (

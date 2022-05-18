@@ -7,7 +7,7 @@ import React, {
 } from 'react'
 import Link, { LinkProps } from 'next/link'
 import clsx from 'clsx'
-import { useOnClickOutside } from '@hooks/index'
+import { useOnClickOutside } from '@/hooks/index'
 
 type TMenuItemAs = 'button' | 'a'
 

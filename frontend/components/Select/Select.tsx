@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { CaretDown } from 'phosphor-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import clsx from 'clsx'
-import { useOnClickOutside } from '@hooks/index'
+import { useOnClickOutside } from '@/hooks/index'
 
 type TOption = {
   label: string

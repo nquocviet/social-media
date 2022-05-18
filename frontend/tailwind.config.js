@@ -129,9 +129,11 @@ module.exports = {
       width: {
         avatar: 'var(--avatar-size)',
         checkbox: 'var(--checkbox-size)',
+        radio: 'var(--radio-size)',
       },
       height: {
         checkbox: 'var(--checkbox-size)',
+        radio: 'var(--radio-size)',
       },
       zIndex: {
         negative: 'var(--z-negative)',

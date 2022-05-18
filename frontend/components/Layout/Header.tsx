@@ -1,7 +1,7 @@
 import React from 'react'
-import { Avatar } from '@components/Avatar'
-import UserAvatar from '@public/images/user-avatar.webp'
-import { Input } from '@components/Input'
+import { Avatar } from '@/components/Avatar'
+import UserAvatar from '@/public/images/user-avatar.webp'
+import { Input } from '@/components/Input'
 import { MagnifyingGlass } from 'phosphor-react'
 import Link from 'next/link'
 

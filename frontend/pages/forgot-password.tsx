@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import { i18n } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { SignIn } from '@/page-components/Auth'
+import { ForgotPassword } from '@/page-components/Auth'
 
-const SignInPage: NextPage = () => {
-  return <SignIn />
+const ForgotPasswordPage: NextPage = () => {
+  return <ForgotPassword />
 }
 
 export const getStaticProps = async ({ locale }: { locale: string }) => {
@@ -14,9 +14,9 @@ export const getStaticProps = async ({ locale }: { locale: string }) => {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['auth'])),
+      ...(await serverSideTranslations(locale, ['auth', 'common'])),
     },
   }
 }
 
-export default SignInPage
+export default ForgotPasswordPage

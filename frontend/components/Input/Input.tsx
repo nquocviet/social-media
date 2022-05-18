@@ -1,7 +1,7 @@
 import React, { forwardRef, ReactNode, useState } from 'react'
 import { Eye, EyeSlash, Info } from 'phosphor-react'
 import clsx from 'clsx'
-import { Tooltip } from '@components/Tooltip'
+import { Tooltip } from '@/components/Tooltip'
 
 const MAX_LENGTH_INPUT = 64
 
@@ -69,14 +69,14 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
     const isInputPassword = type === 'password'
 
     return (
-      <div className={allClassNames}>
-        <label className="block w-full">
-          {label && (
-            <span className="text-base mb-1 inline-block font-semibold">
-              {label}
-            </span>
-          )}
-          <div className="flex items-center">
+      <label className="block w-full text-left">
+        {label && (
+          <span className="text-base mb-1 inline-block font-semibold">
+            {label}
+          </span>
+        )}
+        <div className={allClassNames}>
+          <div className="flex w-full items-center">
             {prefix && <span className="mr-2">{prefix}</span>}
             <input
               {...(isInputPassword && showPassword
@@ -115,8 +115,8 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
               </Tooltip>
             )}
           </div>
-        </label>
-      </div>
+        </div>
+      </label>
     )
   }
 )
