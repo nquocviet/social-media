@@ -1,6 +1,6 @@
 import React from 'react'
-import { Logo } from '@components/Logo'
-import { Select } from '@components/Select'
+import { Logo } from '@/components/Logo'
+import { Select } from '@/components/Select'
 import { useRouter } from 'next/router'
 
 const locales = [

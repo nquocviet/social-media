@@ -12,7 +12,7 @@ import {
 import Link from 'next/link'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
-import { Logo } from '@components/Logo'
+import { Logo } from '@/components/Logo'
 
 const navItems = [
   {
