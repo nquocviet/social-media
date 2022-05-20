@@ -1,5 +1,59 @@
 {
-  "male": "Nam",
-  "female": "Nữ",
-  "send": "Gửi"
+  "birthdays": "Sinh nhật",
+  "birthday_today": "Sinh nhật hôm nay",
+  "public": "Công khai",
+  "might_like": "Bạn có thể thích",
+  "recent_event": "Sự kiện gần đây",
+  "sex": {
+    "male": "Nam",
+    "female": "Nữ"
+  },
+  "post": {
+    "live": "Phát trực tiếp",
+    "photo_video": "Hình ảnh/video",
+    "feeling": "Cảm xúc",
+    "like": "Thích",
+    "comment": "Bình luận",
+    "share": "chia sẻ",
+    "total_comment_one": "{{count}} bình luận",
+    "total_comment_other": "{{count}} bình luận",
+    "total_share": "{{count}} chia sẻ"
+  },
+  "action": {
+    "send": "Gửi",
+    "turn_on_notification_post": "Bật thông báo cho bài viết này",
+    "hide_post": "Ẩn bài viết",
+    "report_post": "Báo cáo bài viết",
+    "hide_event": "Ẩn sự kiện",
+    "report_event": "Báo cáo sự kiện",
+    "follow": "Theo dõi",
+    "unfollow": "Hủy theo dõi",
+    "ignore": "Bỏ qua",
+    "see_all": "Xem tất cả"
+  },
+  "navigation": {
+    "feed": "Trang chủ",
+    "community": "Cộng đồng",
+    "messages": "Tin nhắn",
+    "notification": "Thông báo",
+    "explore": "Khám phá",
+    "profile": "Trang cá nhân",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất"
+  },
+  "friend": {
+    "friends": "Bạn bè",
+    "message_sounds": "Âm thanh tin nhắn",
+    "call_sounds": "Âm thanh cuộc gọi",
+    "turn_on_status": "Bật trạng thái hoạt động",
+    "mutual_friends_one": "{{count}} bạn chung",
+    "mutual_friends_other": "{{count}} bạn chung"
+  },
+  "placeholder": {
+    "search_something": "Tìm kiếm gì đó ở đây...",
+    "search_friends": "Tìm kiếm bạn bè...",
+    "type_something": "Nhập gì đó ở đây...",
+    "what_happening": "Bạn đang nghĩ gì thế?",
+    "congratulation_now": "Chúc mừng ngay"
+  }
 }

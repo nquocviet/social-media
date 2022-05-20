@@ -5,7 +5,7 @@ import clsx from 'clsx'
 type TButtonTypes = 'button' | 'submit' | 'reset'
 type TButtonColors = 'primary' | 'neutral'
 type TButtonVariants = 'contained' | 'outline' | 'text'
-type TButtonSizes = 'sm' | 'md' | 'lg'
+type TButtonSizes = 'xs' | 'sm' | 'md' | 'lg'
 type TButtonRounded = 'sm' | 'md' | 'lg' | 'full'
 type TButtonTransforms = 'normal' | 'lowercase' | 'uppercase' | 'capitalize'
 
@@ -48,7 +48,7 @@ const buttonVariants = {
     primary:
       'text-primary-700 border-transparent hover:bg-primary-50 focus:ring-primary-100',
     neutral:
-      'text-gray-600 border-transparent hover:bg-gray-50 focus:ring-gray-100',
+      'text-gray-600 border-transparent hover:bg-gray-100 focus:ring-gray-200',
   },
   contained: {
     primary:
@@ -71,6 +71,7 @@ const buttonVariants = {
   },
 }
 const buttonSizes = {
+  xs: 'px-2.5 py-1',
   sm: 'px-3 py-1.5',
   md: 'px-3.5 py-2.5',
   lg: 'px-4 py-3',

@@ -1,5 +1,6 @@
-import clsx from 'clsx'
 import React from 'react'
+import clsx from 'clsx'
+import { ImageRatio } from '../ImageRatio'
 
 type TAvatarRounded = 'sm' | 'md' | 'lg' | 'full'
 
@@ -25,7 +26,7 @@ const Avatar = ({
   rounded = 'full',
   className,
 }: TAvatarProps) => {
-  const defaultClassName = 'relative w-avatar'
+  const defaultClassName = 'relative w-avatar flex-shrink-0'
   const allClassNames = clsx(
     defaultClassName,
     avatarRoundedStyles[rounded],
@@ -33,15 +34,14 @@ const Avatar = ({
   )
 
   return (
-    <div
+    <ImageRatio
       className={allClassNames}
+      src={src}
+      alt={alt}
       style={{
-        ['--aspect-ratio' as any]: '1',
         ['--avatar-size' as any]: `${size}px`,
       }}
-    >
-      <img src={src} alt={alt} />
-    </div>
+    />
   )
 }
 

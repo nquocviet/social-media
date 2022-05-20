@@ -8,7 +8,7 @@ type TLayoutProps = {
 }
 
 const Layout = ({ children }: TLayoutProps) => {
-  const isAuth = false
+  const isAuth = true
 
   return (
     <>
@@ -21,7 +21,7 @@ const Layout = ({ children }: TLayoutProps) => {
         {isAuth && <Sidebar />}
         <div className="flex w-full flex-col items-stretch">
           {isAuth && <Header />}
-          <main className="flex-1">{children}</main>
+          <div className="flex flex-1 items-stretch">{children}</div>
         </div>
       </div>
     </>

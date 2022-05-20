@@ -21,7 +21,7 @@ const ForgotPassword = () => {
         </div>
         <div className="mb-7">
           <Button type="submit" fluid>
-            {ts('send')}
+            {ts('action.send')}
           </Button>
         </div>
         <p className="text-center font-semibold">

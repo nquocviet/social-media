@@ -64,7 +64,7 @@ const GenderInput = ({
                 checked={selected === '0'}
                 name="gender"
                 value="0"
-                label={t('male')}
+                label={t('sex.male')}
                 onChange={onChange}
               />
             </div>
@@ -73,7 +73,7 @@ const GenderInput = ({
                 checked={selected === '1'}
                 name="gender"
                 value="1"
-                label={t('female')}
+                label={t('sex.female')}
                 onChange={onChange}
               />
             </div>

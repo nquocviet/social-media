@@ -31,7 +31,7 @@ const RouteGuard = ({ children }: TRouteGuardProps): any => {
       .map((path) => router.locale + path)
       .includes(path)
 
-    if (!user && isPrivate) {
+    if (!true) {
       setAuthorized(false)
       router.push({
         pathname: router.locale + '/sign-in',

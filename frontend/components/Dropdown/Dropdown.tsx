@@ -15,11 +15,13 @@ type TDropdownProps = {
   children: ReactElement
   overlay: ReactElement
   className?: string
+  preventClose?: boolean
 }
 
 type TMenuProps = {
   children: ReactNode | ReactNode[]
   open?: boolean
+  size?: number
   className?: string
   position?: string
 }
@@ -45,10 +47,15 @@ type TMenuItemAsLink = TMenuItemBaseProps &
 
 type TMenuItemProps = TMenuItemAsButton | TMenuItemAsLink
 
-export const Dropdown = ({ children, overlay, className }: TDropdownProps) => {
+export const Dropdown = ({
+  children,
+  overlay,
+  className,
+  preventClose = false,
+}: TDropdownProps) => {
   const [open, setOpen] = useState<boolean>(false)
   const dropdownRef = useRef(null)
-  const defaultClassName = 'relative z-dropdown'
+  const defaultClassName = 'relative'
   const allClassNames = clsx(defaultClassName, className)
 
   const onToggle = () => setOpen((prevState) => !prevState)
@@ -62,13 +69,16 @@ export const Dropdown = ({ children, overlay, className }: TDropdownProps) => {
       <Menu
         className={overlay.props.className}
         position={overlay.props.position}
+        size={overlay.props.size}
         open={open}
       >
         {overlay.props.children.length ? (
           overlay.props.children.map(
             (menuItem: ReactElement, index: number) => (
               <Fragment key={index}>
-                {React.cloneElement(menuItem, { onClose })}
+                {React.cloneElement(menuItem, {
+                  onClose: preventClose ? null : onClose,
+                })}
               </Fragment>
             )
           )
@@ -85,14 +95,24 @@ export const Dropdown = ({ children, overlay, className }: TDropdownProps) => {
 export const Menu = ({
   children,
   open,
+  size = 250,
   className,
   position = 'top-full right-0',
 }: TMenuProps) => {
   const defaultClassName =
-    'absolute min-w-[200px] bg-white p-2 mt-1 shadow-sm border border-gray-100 rounded overflow-hidden'
+    'absolute z-dropdown w-menu min-w-[200px] bg-white p-2 mt-1 shadow-sm border border-gray-100 rounded overflow-hidden'
   const allClassNames = clsx(defaultClassName, className, position)
 
-  return open ? <ul className={allClassNames}>{children}</ul> : <></>
+  return open ? (
+    <ul
+      className={allClassNames}
+      style={{ ['--menu-dropdown-size' as any]: `${size}px` }}
+    >
+      {children}
+    </ul>
+  ) : (
+    <></>
+  )
 }
 
 export const MenuDivider = () => {

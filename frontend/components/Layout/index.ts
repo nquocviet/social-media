@@ -1,3 +1,7 @@
+export { default as FriendList } from './FriendList'
 export { default as Header } from './Header'
 export { default as Layout } from './Layout'
+export { default as Main } from './Main'
+export { default as Section } from './Section'
 export { default as Sidebar } from './Sidebar'
+export { default as WidgetSidebar } from './WidgetSidebar'

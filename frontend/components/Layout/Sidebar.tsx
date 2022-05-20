@@ -12,87 +12,91 @@ import {
 import Link from 'next/link'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
 import { Logo } from '@/components/Logo'
 
 const navItems = [
   {
     slug: '/',
-    label: 'Feed',
+    label: 'feed',
     icon: SquaresFour,
   },
   {
     slug: '/community',
-    label: 'My community',
+    label: 'community',
     icon: Users,
   },
   {
     slug: '/messages',
-    label: 'Messages',
+    label: 'messages',
     icon: ChatText,
   },
   {
     slug: '/notification',
-    label: 'Notification',
+    label: 'notification',
     icon: BellSimple,
   },
   {
     slug: '/explore',
-    label: 'Explore',
+    label: 'explore',
     icon: GlobeHemisphereWest,
   },
   {
     slug: '/profile',
-    label: 'Profile',
+    label: 'profile',
     icon: User,
   },
   {
     slug: '/settings',
-    label: 'Settings',
+    label: 'settings',
     icon: Gear,
   },
 ]
 
 const Sidebar = () => {
   const router = useRouter()
+  const { t } = useTranslation('common')
 
   return (
-    <aside className="w-[280px] bg-white p-4">
-      <Logo />
-      <nav className="mt-8">
-        <ul className="font-semibold">
-          {navItems.map((navItem, index) => {
-            const { slug, label, icon: Icon } = navItem
+    <div className="w-sidebar flex-shrink-0 bg-white">
+      <aside className="fixed top-0 left-0 h-screen max-h-screen w-sidebar overflow-y-auto p-4">
+        <Logo />
+        <nav className="mt-8">
+          <ul className="font-semibold">
+            {navItems.map((navItem, index) => {
+              const { slug, label, icon: Icon } = navItem
 
-            return (
-              <li className="mb-3" key={index}>
-                <Link href={slug}>
-                  <a
-                    className={clsx(
-                      'flex items-center rounded-lg px-3 py-2 transition-colors duration-200',
-                      router.asPath === slug
-                        ? 'bg-primary-600 text-white'
-                        : 'hover:bg-gray-100'
-                    )}
-                  >
-                    <Icon size={20} />
-                    <span className="ml-4">{label}</span>
-                  </a>
-                </Link>
-              </li>
-            )
-          })}
-          <li className="mb-3">
-            <a
-              role="button"
-              className="flex w-full items-center rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-gray-100"
-            >
-              <SignOut size={20} />
-              <span className="ml-4">Logout</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+              return (
+                <li className="mb-3" key={index}>
+                  <Link href={slug}>
+                    <a
+                      className={clsx(
+                        'flex items-center rounded-lg px-3 py-2 transition-colors duration-200',
+                        router.asPath === slug
+                          ? 'bg-primary-600 text-white'
+                          : 'hover:bg-gray-100'
+                      )}
+                    >
+                      <Icon size={20} />
+                      <span className="ml-4">{t(`navigation.${label}`)}</span>
+                    </a>
+                  </Link>
+                </li>
+              )
+            })}
+            <li className="mb-3">
+              <a
+                role="button"
+                className="flex w-full items-center rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-gray-100"
+              >
+                <SignOut size={20} />
+                <span className="ml-4">{t('navigation.logout')}</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
   )
 }
 
