@@ -62,6 +62,9 @@ module.exports = {
       black: 'var(--fw-black)',
     },
     extend: {
+      spacing: {
+        layout: 'var(--su-layout)',
+      },
       colors: {
         white: 'var(--white)',
         black: 'var(--black)',
@@ -127,13 +130,25 @@ module.exports = {
         },
       },
       width: {
+        header: 'var(--header-width)',
+        sidebar: 'var(--sidebar-width)',
+        friendlist: 'var(--friendlist-width)',
         avatar: 'var(--avatar-size)',
         checkbox: 'var(--checkbox-size)',
+        dot: 'var(--dot-size)',
         radio: 'var(--radio-size)',
+        menu: 'var(--menu-dropdown-size)',
+        'switch-toggle': 'var(--switch-toggle-size)',
+        switch: 'calc(var(--switch-toggle-size) * 2)',
       },
       height: {
+        header: 'var(--header-height)',
+        avatar: 'var(--avatar-size)',
         checkbox: 'var(--checkbox-size)',
+        dot: 'var(--dot-size)',
         radio: 'var(--radio-size)',
+        'switch-toggle': 'var(--switch-toggle-size)',
+        switch: 'calc(var(--switch-toggle-size) * 2)',
       },
       zIndex: {
         negative: 'var(--z-negative)',

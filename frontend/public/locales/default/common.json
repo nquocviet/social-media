@@ -1,5 +1,59 @@
 {
-  "male": "Male",
-  "female": "Female",
-  "send": "Send"
+  "birthdays": "Birthdays",
+  "birthday_today": "Birthday today",
+  "public": "Public",
+  "might_like": "You might like",
+  "recent_event": "Recent event",
+  "sex": {
+    "male": "Male",
+    "female": "Female"
+  },
+  "post": {
+    "live": "Live video",
+    "photo_video": "Photo/video",
+    "feeling": "Feeling",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "share",
+    "total_comment_one": "{{count}} comment",
+    "total_comment_other": "{{count}} comments",
+    "total_share": "{{count}} share"
+  },
+  "action": {
+    "send": "Send",
+    "turn_on_notification_post": "Turn on notification for this post",
+    "hide_post": "Hide post",
+    "report_post": "Report this post",
+    "hide_event": "Hide event",
+    "report_event": "Report event",
+    "follow": "Follow",
+    "unfollow": "Unfollow",
+    "ignore": "Ignore",
+    "see_all": "See all"
+  },
+  "navigation": {
+    "feed": "Feed",
+    "community": "Community",
+    "messages": "Messages",
+    "notification": "Notification",
+    "explore": "Explore",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "friend": {
+    "friends": "Friends",
+    "message_sounds": "Message sounds",
+    "call_sounds": "Call sounds",
+    "turn_on_status": "Turn on active status",
+    "mutual_friends_one": "{{count}} mutual friends",
+    "mutual_friends_other": "{{count}} mutual friends"
+  },
+  "placeholder": {
+    "search_something": "Search for something here...",
+    "search_friends": "Search friends...",
+    "type_something": "Type something here...",
+    "what_happening": "What's happening?",
+    "congratulation_now": "Congratulation now"
+  }
 }
