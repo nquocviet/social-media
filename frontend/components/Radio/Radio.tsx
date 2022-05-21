@@ -7,7 +7,7 @@ type TRadioProps = {
   label?: string
   labelPlacement?: TLabelPlacement
   size?: number
-  value: string
+  value: string | number
   name: string
   className?: string
   containerClassName?: string

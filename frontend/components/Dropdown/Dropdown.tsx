@@ -100,7 +100,7 @@ export const Menu = ({
   position = 'top-full right-0',
 }: TMenuProps) => {
   const defaultClassName =
-    'absolute z-dropdown w-menu min-w-[200px] bg-white p-2 mt-1 shadow-sm border border-gray-100 rounded overflow-hidden'
+    'absolute z-elevate w-menu min-w-[200px] bg-white p-2 mt-1 shadow-sm border border-gray-100 rounded overflow-hidden'
   const allClassNames = clsx(defaultClassName, className, position)
 
   return open ? (
