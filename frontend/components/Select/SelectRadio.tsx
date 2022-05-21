@@ -3,36 +3,41 @@ import { CaretDown } from 'phosphor-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import clsx from 'clsx'
 import { useOnClickOutside } from '@/hooks/index'
+import { useTranslation } from 'next-i18next'
+import { Radio } from '../Radio'
 
 type TOption = {
   label: string
-  value: string
+  value: string | number
 }
 
-type TSelectProps = {
+type TSelectRadioProps = {
   options: TOption[]
   defaultValue?: TOption | {}
+  name: string
   maxHeight?: number
   position?: string
   borderless?: boolean
-  onChange: (value: string) => void
+  onChange: (value: string | number) => void
   className?: string
 }
 
-const Select = ({
+const SelectRadio = ({
   options,
   defaultValue = {},
+  name,
   maxHeight = 250,
   position = 'top-[calc(100%+6px)] right-0',
   borderless = false,
   className,
   onChange,
-}: TSelectProps) => {
+}: TSelectRadioProps) => {
+  const { t } = useTranslation('common')
   const [optionSelected, setOptionSelected] = useState(defaultValue)
   const [showOptions, setShowOptions] = useState<boolean>(false)
   const selectRef = useRef(null)
   const defaultClassName =
-    'flex items-center justify-between cursor-pointer rounded pl-3.5 pr-2 py-2 focus-within:border-gray-700'
+    'flex items-center justify-between cursor-pointer rounded bg-primary-50 pl-3.5 pr-2 py-2 focus-within:border-gray-700'
   const allClassNames = clsx(
     defaultClassName,
     className,
@@ -58,7 +63,9 @@ const Select = ({
         tabIndex={0}
         onClick={() => setShowOptions((prevState) => !prevState)}
       >
-        {(optionSelected as TOption).label}
+        <span className="text-primary-600">
+          {t(`option.${(optionSelected as TOption).label}`)}
+        </span>
         <span
           className={clsx(
             'ml-2 transition-transform duration-300',
@@ -78,7 +85,7 @@ const Select = ({
               duration: 0.15,
             }}
             className={clsx(
-              'absolute z-dropdown flex w-full min-w-[200px] flex-col items-stretch overflow-hidden rounded border border-gray-100 bg-white shadow',
+              'absolute z-dropdown flex w-full min-w-[150px] flex-col items-stretch overflow-hidden rounded border border-gray-100 bg-white shadow',
               position
             )}
           >
@@ -89,15 +96,16 @@ const Select = ({
               {options.map(({ value, label }) => (
                 <li
                   key={value}
-                  className={clsx(
-                    'cursor-pointer px-3.5 py-2 transition-colors duration-200',
-                    (optionSelected as any).value === value
-                      ? 'bg-primary-50 text-primary-700'
-                      : 'hover:bg-gray-100'
-                  )}
+                  className="cursor-pointer px-3.5 py-2 transition-colors duration-200"
                   onClick={() => handleSelect({ value, label })}
                 >
-                  {label}
+                  <Radio
+                    label={t(`option.${label}`)}
+                    name={name}
+                    value={value}
+                    checked={(optionSelected as any).value === value}
+                    onChange={() => setOptionSelected({ value, label })}
+                  />
                 </li>
               ))}
             </ul>
@@ -108,4 +116,4 @@ const Select = ({
   )
 }
 
-export default Select
+export default SelectRadio

@@ -129,6 +129,9 @@ module.exports = {
           900: 'var(--green-900)',
         },
       },
+      maxWidth: {
+        modal: 'var(--modal-width)',
+      },
       width: {
         header: 'var(--header-width)',
         sidebar: 'var(--sidebar-width)',
@@ -159,6 +162,28 @@ module.exports = {
         modal: 'var(--z-modal)',
         popover: 'var(--z-popover)',
         maximum: 'var(--z-maximum)',
+      },
+      animation: {
+        'show-up': 'show-up 0.15s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+        'show-down': 'show-down 0.15s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+      },
+      keyframes: {
+        'show-up': {
+          '0%': {
+            transform: 'translateY(1.5rem)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+          },
+        },
+        'show-down': {
+          '0%': {
+            transform: 'translateY(-1.5rem)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+          },
+        },
       },
     },
   },

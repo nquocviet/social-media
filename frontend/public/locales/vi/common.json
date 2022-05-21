@@ -9,6 +9,7 @@
     "female": "Nữ"
   },
   "post": {
+    "create": "Tạo bài viết",
     "live": "Phát trực tiếp",
     "photo_video": "Hình ảnh/video",
     "feeling": "Cảm xúc",
@@ -21,6 +22,10 @@
   },
   "action": {
     "send": "Gửi",
+    "cancel": "Hủy bỏ",
+    "confirm": "Xác nhận",
+    "submit": "Gửi đi",
+    "post": "Đăng",
     "turn_on_notification_post": "Bật thông báo cho bài viết này",
     "hide_post": "Ẩn bài viết",
     "report_post": "Báo cáo bài viết",
@@ -28,8 +33,24 @@
     "report_event": "Báo cáo sự kiện",
     "follow": "Theo dõi",
     "unfollow": "Hủy theo dõi",
+    "unfollow_people": "Hủy theo dõi {{people}}",
     "ignore": "Bỏ qua",
     "see_all": "Xem tất cả"
+  },
+  "confirm": {
+    "unfollow": "Các tweet của họ sẽ không còn hiển thị trong dòng thời gian trên trang chủ của bạn nữa."
+  },
+  "issues": {
+    "report": "Report an issue",
+    "it_spam": "Đây là tin rác",
+    "nudity_sexual": "Khoả thân hoặc hoạt động tình dục",
+    "false_information": "Thông tin sai lệch",
+    "hateful_speech": "Quấy rối hoặc lời nói đả kích",
+    "abusive": "Lạm dụng hoặc có hại",
+    "sale_of_illegal": "Bán hàng hóa bất hợp pháp hoặc được quản lý",
+    "intellectual_property": "Xâm phạm hoặc phỉ báng sở hữu trí tuệ",
+    "violence": "Bạo lực hoặc tổn hại thể chất",
+    "not_interest": "Tôi vẫn không quan tâm đến điều này"
   },
   "navigation": {
     "feed": "Trang chủ",
@@ -55,5 +76,10 @@
     "type_something": "Nhập gì đó ở đây...",
     "what_happening": "Bạn đang nghĩ gì thế?",
     "congratulation_now": "Chúc mừng ngay"
+  },
+  "option": {
+    "friends": "Bạn bè",
+    "public": "Công khai",
+    "only_me": "Chỉ mình tôi"
   }
 }

@@ -10,8 +10,10 @@ type TTextareaProps = {
   error?: string
   reset?: boolean
   maxLength?: number
+  minHeight?: number
   readOnly?: boolean
   contentRef?: any
+  onClick?: () => void
   onFocus?: () => void
   onBlur?: () => void
 }
@@ -25,6 +27,7 @@ const Textarea = forwardRef<HTMLDivElement, TTextareaProps>(
       error,
       reset,
       maxLength = MAX_LENGTH,
+      minHeight = 0,
       contentRef,
       onFocus,
       onBlur,
@@ -130,6 +133,9 @@ const Textarea = forwardRef<HTMLDivElement, TTextareaProps>(
               onKeyPress={onKeyPress}
               onKeyUp={onKeyUp}
               onKeyDown={onKeyDown}
+              style={{
+                minHeight,
+              }}
               {...rest}
             ></div>
             <span

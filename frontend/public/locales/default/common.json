@@ -9,6 +9,7 @@
     "female": "Female"
   },
   "post": {
+    "create": "Create a post",
     "live": "Live video",
     "photo_video": "Photo/video",
     "feeling": "Feeling",
@@ -21,6 +22,10 @@
   },
   "action": {
     "send": "Send",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "submit": "Submit",
+    "post": "Post",
     "turn_on_notification_post": "Turn on notification for this post",
     "hide_post": "Hide post",
     "report_post": "Report this post",
@@ -28,8 +33,24 @@
     "report_event": "Report event",
     "follow": "Follow",
     "unfollow": "Unfollow",
+    "unfollow_people": "Unfollow {{people}}",
     "ignore": "Ignore",
     "see_all": "See all"
+  },
+  "confirm": {
+    "unfollow": "Their tweets will no longer show up in your home timeline."
+  },
+  "issues": {
+    "report": "Report an issue",
+    "it_spam": "It's spam",
+    "nudity_sexual": "Nudity or sexual activity",
+    "false_information": "False information",
+    "hateful_speech": "Harassment or hateful speech",
+    "abusive": "It's abusive or harmful",
+    "sale_of_illegal": "Sale of illegal or regulated goods",
+    "intellectual_property": "Intellectual property infrigement or defamation",
+    "violence": "Violence or physical harm",
+    "not_interest": "I'm still not interest in this"
   },
   "navigation": {
     "feed": "Feed",
@@ -55,5 +76,10 @@
     "type_something": "Type something here...",
     "what_happening": "What's happening?",
     "congratulation_now": "Congratulation now"
+  },
+  "option": {
+    "friends": "Friends",
+    "public": "Public",
+    "only_me": "Only me"
   }
 }
