@@ -8,6 +8,7 @@ import { UserCard } from '../User'
 import { Divider } from '../Divider'
 import Section from './Section'
 import { BirthdayCard } from '../Birthday'
+import { Heading } from '../Heading'
 
 const WidgetSidebar = () => {
   const { t } = useTranslation('common')
@@ -16,7 +17,7 @@ const WidgetSidebar = () => {
     <div className="hidden w-sidebar xl:block">
       <Section>
         <header className="flex justify-between px-4 py-3">
-          <h2 className="font-semibold">{t('might_like')}</h2>
+          <Heading>{t('might_like')}</Heading>
           <Anchor href="/#">{t('action.see_all')}</Anchor>
         </header>
         <Divider />
@@ -24,7 +25,7 @@ const WidgetSidebar = () => {
       </Section>
       <Section>
         <header className="flex justify-between px-4 py-3">
-          <h2 className="font-semibold">{t('recent_event')}</h2>
+          <Heading>{t('recent_event')}</Heading>
           <Dropdown
             className="inline-flex flex-shrink-0"
             preventClose={true}
@@ -58,7 +59,7 @@ const WidgetSidebar = () => {
       </Section>
       <Section>
         <header className="flex justify-between px-4 py-3">
-          <h2 className="font-semibold">{t('birthdays')}</h2>
+          <Heading>{t('birthdays')}</Heading>
           <Anchor href="/#">{t('action.see_all')}</Anchor>
         </header>
         <Divider />

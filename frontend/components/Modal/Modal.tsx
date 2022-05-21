@@ -5,6 +5,7 @@ import { useTranslation } from 'next-i18next'
 import { Button } from '../Button'
 import { useOnClickOutside } from '@/hooks/index'
 import { Divider } from '../Divider'
+import { Heading } from '../Heading'
 
 type TModalProps = {
   open: boolean
@@ -48,7 +49,7 @@ const Modal = ({
               ref={modalRef}
             >
               <div className="flex items-center justify-between py-2 pl-6 pr-2">
-                <h2 className="text-xl font-bold leading-10">{title}</h2>
+                <Heading className="text-xl">{title}</Heading>
                 <button className="rounded-md p-2" onClick={onClose}>
                   <X size={20} />
                 </button>

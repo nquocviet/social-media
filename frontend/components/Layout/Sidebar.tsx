@@ -28,15 +28,17 @@ const navItems = [
     slug: '/community/suggestions',
     label: 'community',
     icon: Users,
+    includePath: true,
   },
   {
     slug: '/messages',
     label: 'messages',
     icon: ChatText,
+    includePath: true,
   },
   {
-    slug: '/notification',
-    label: 'notification',
+    slug: '/notifications',
+    label: 'notifications',
     icon: BellSimple,
   },
   {
@@ -89,7 +91,10 @@ const Sidebar = () => {
           <nav>
             <ul className="font-semibold">
               {navItems.map((navItem, index) => {
-                const { slug, label, icon: Icon } = navItem
+                const { slug, label, icon: Icon, includePath } = navItem
+                const isActive = includePath
+                  ? router.asPath.split('/')[1] === slug.split('/')[1]
+                  : router.asPath === slug
 
                 return (
                   <li className="mb-3" key={index}>
@@ -97,7 +102,7 @@ const Sidebar = () => {
                       <a
                         className={clsx(
                           'flex items-center rounded-lg px-3 py-2 transition-colors duration-200',
-                          router.asPath === slug
+                          isActive
                             ? 'bg-primary-600 text-white'
                             : 'hover:bg-gray-100'
                         )}

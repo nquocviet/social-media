@@ -12,6 +12,7 @@ import { Input } from '../Input'
 import { Dropdown, Menu, MenuItem } from '../Dropdown'
 import { Switch } from '../Switch'
 import { UserMiniCard } from '../User'
+import { Heading } from '../Heading'
 
 const FriendList = () => {
   const { t } = useTranslation('common')
@@ -31,8 +32,8 @@ const FriendList = () => {
           />
         </section>
         <section className="mb-6 last:m-0">
-          <header className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold">{t('friend.friends')}</h2>
+          <header className="flex items-center justify-between pb-2">
+            <Heading className="text-lg">{t('friend.friends')}</Heading>
             <Dropdown
               className="inline-flex"
               preventClose={true}
