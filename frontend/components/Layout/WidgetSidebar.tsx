@@ -13,7 +13,7 @@ const WidgetSidebar = () => {
   const { t } = useTranslation('common')
 
   return (
-    <div className="w-sidebar">
+    <div className="hidden w-sidebar xl:block">
       <Section>
         <header className="flex justify-between px-4 py-3">
           <h2 className="font-semibold">{t('might_like')}</h2>

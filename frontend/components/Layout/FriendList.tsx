@@ -20,7 +20,7 @@ const FriendList = () => {
   const { open: activeStatus, toggle: toggleActiveStatus } = useToggle(true)
 
   return (
-    <div className="w-friendlist flex-shrink-0">
+    <div className="hidden w-friendlist flex-shrink-0 md:block">
       <aside className="fixed top-0 h-screen max-h-screen w-friendlist overflow-y-auto bg-white px-4 pb-4">
         <div className="mb-1.5 h-header w-full"></div>
         <section className="mb-6 last:m-0">

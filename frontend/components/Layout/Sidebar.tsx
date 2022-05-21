@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {
   SquaresFour,
   Users,
@@ -8,12 +8,15 @@ import {
   User,
   Gear,
   SignOut,
+  List,
 } from 'phosphor-react'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
-import { Logo } from '@/components/Logo'
+import { Logo } from '../Logo'
+import { useUiContext } from '@/context/ui'
+import { useOnClickOutside } from '@/hooks/index'
 
 const navItems = [
   {
@@ -56,47 +59,73 @@ const navItems = [
 const Sidebar = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
+  const [ui, setUi] = useUiContext()
+  const sidebarRef = useRef(null)
+
+  useOnClickOutside(sidebarRef, () => setUi('sidebar', false))
 
   return (
-    <div className="w-sidebar flex-shrink-0 bg-white">
-      <aside className="fixed top-0 left-0 h-screen max-h-screen w-sidebar overflow-y-auto p-4">
-        <Logo />
-        <nav className="mt-8">
-          <ul className="font-semibold">
-            {navItems.map((navItem, index) => {
-              const { slug, label, icon: Icon } = navItem
-
-              return (
-                <li className="mb-3" key={index}>
-                  <Link href={slug}>
-                    <a
-                      className={clsx(
-                        'flex items-center rounded-lg px-3 py-2 transition-colors duration-200',
-                        router.asPath === slug
-                          ? 'bg-primary-600 text-white'
-                          : 'hover:bg-gray-100'
-                      )}
-                    >
-                      <Icon size={20} />
-                      <span className="ml-4">{t(`navigation.${label}`)}</span>
-                    </a>
-                  </Link>
-                </li>
-              )
-            })}
-            <li className="mb-3">
-              <a
-                role="button"
-                className="flex w-full items-center rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-gray-100"
+    <>
+      <div
+        ref={sidebarRef}
+        className={clsx(
+          'fixed z-popover w-sidebar flex-shrink-0 bg-white transition-transform duration-200 lg:static lg:z-0',
+          !ui.sidebar && '-translate-x-full lg:translate-x-0'
+        )}
+      >
+        <aside className="sticky top-0 left-0 h-screen max-h-screen w-sidebar overflow-y-auto overflow-x-hidden bg-white p-4">
+          <div className="-mb-4 h-header">
+            <div className="-mr-4 flex w-sidebar items-center py-1.5 lg:hidden">
+              <button
+                type="button"
+                className="mr-4 block lg:hidden"
+                onClick={() => setUi('sidebar', false)}
               >
-                <SignOut size={20} />
-                <span className="ml-4">{t('navigation.logout')}</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    </div>
+                <List size={20} weight="bold" />
+              </button>
+              <Logo />
+            </div>
+          </div>
+          <nav>
+            <ul className="font-semibold">
+              {navItems.map((navItem, index) => {
+                const { slug, label, icon: Icon } = navItem
+
+                return (
+                  <li className="mb-3" key={index}>
+                    <Link href={slug}>
+                      <a
+                        className={clsx(
+                          'flex items-center rounded-lg px-3 py-2 transition-colors duration-200',
+                          router.asPath === slug
+                            ? 'bg-primary-600 text-white'
+                            : 'hover:bg-gray-100'
+                        )}
+                      >
+                        <Icon size={20} />
+                        <span className="ml-4">{t(`navigation.${label}`)}</span>
+                      </a>
+                    </Link>
+                  </li>
+                )
+              })}
+              <li className="mb-3">
+                <a
+                  role="button"
+                  className="flex w-full items-center rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-gray-100"
+                >
+                  <SignOut size={20} />
+                  <span className="ml-4">{t('navigation.logout')}</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      {ui.sidebar && (
+        <div className="fixed top-0 left-0 z-drawer h-screen w-screen bg-zinc-900/50"></div>
+      )}
+    </>
   )
 }
 

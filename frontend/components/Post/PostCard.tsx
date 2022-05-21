@@ -101,15 +101,30 @@ const PostCard = () => {
       <div className="mb-4 last:mb-0">
         <Divider />
         <div className="flex items-stretch py-1">
-          <Button color="neutral" size="xs" variant="text" className="flex-1">
+          <Button
+            color="neutral"
+            size="xs"
+            variant="text"
+            className="flex-1 px-0"
+          >
             <Heart size={24} className="mr-2" />
             {t('post.like')}
           </Button>
-          <Button color="neutral" size="xs" variant="text" className="flex-1">
+          <Button
+            color="neutral"
+            size="xs"
+            variant="text"
+            className="flex-1 px-0"
+          >
             <ChatsCircle size={24} className="mr-2" />
             {t('post.comment')}
           </Button>
-          <Button color="neutral" size="xs" variant="text" className="flex-1">
+          <Button
+            color="neutral"
+            size="xs"
+            variant="text"
+            className="flex-1 px-0"
+          >
             <Share size={24} className="mr-2" />
             {t('post.share')}
           </Button>
