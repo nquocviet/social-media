@@ -36,7 +36,7 @@ const Modal = ({
 
   return open
     ? ReactDOM.createPortal(
-        <div className="fixed top-0 left-0 z-modal flex h-screen w-screen items-center justify-center bg-neutral-900/30">
+        <div className="fixed top-0 left-0 z-modal flex h-screen w-screen items-center justify-center bg-zinc-900/50">
           <div
             className="w-full max-w-modal -translate-y-16 px-4"
             style={{

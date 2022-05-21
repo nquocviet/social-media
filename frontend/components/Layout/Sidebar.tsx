@@ -25,7 +25,7 @@ const navItems = [
     icon: SquaresFour,
   },
   {
-    slug: '/community',
+    slug: '/community/suggestions',
     label: 'community',
     icon: Users,
   },

@@ -27,9 +27,12 @@ type TGridProps = {
   column?: boolean
   spacer?: number
   expanded?: boolean
+  className?: string
+  xl?: GridSizes
   lg?: GridSizes
   md?: GridSizes
   sm?: GridSizes
+  xs?: GridSizes
 }
 
 const Grid = ({
@@ -40,9 +43,12 @@ const Grid = ({
   column,
   spacer = 16,
   expanded,
+  className,
+  xl,
   lg,
   md,
   sm,
+  xs,
 }: TGridProps) => {
   const isRow: boolean = row || !column
 
@@ -51,9 +57,12 @@ const Grid = ({
     isRow && expanded ? ` ${styles.expanded}` : '',
     isRow && justify ? ` ${styles[justify]}` : '',
     isRow && align ? ` ${styles['align-' + align]}` : '',
+    !isRow && xs ? ` ${styles['xs-' + xs]}` : '',
     !isRow && sm ? ` ${styles['sm-' + sm]}` : '',
     !isRow && md ? ` ${styles['md-' + md]}` : '',
-    !isRow && lg ? ` ${styles['lg-' + lg]}` : ''
+    !isRow && lg ? ` ${styles['lg-' + lg]}` : '',
+    !isRow && xl ? ` ${styles['xl-' + xl]}` : '',
+    className
   )
 
   return (
