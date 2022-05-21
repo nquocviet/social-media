@@ -1,6 +1,10 @@
 {
   "birthdays": "Birthdays",
   "birthday_today": "Birthday today",
+  "followers_one": "{{count}} follower",
+  "followers_other": "{{count}} followers",
+  "following": "{{count}} following",
+  "suggestions": "People you may like",
   "public": "Public",
   "might_like": "You might like",
   "recent_event": "Recent event",
@@ -56,11 +60,20 @@
     "feed": "Feed",
     "community": "Community",
     "messages": "Messages",
-    "notification": "Notification",
+    "notifications": "Notifications",
     "explore": "Explore",
     "profile": "Profile",
     "settings": "Settings",
     "logout": "Logout"
+  },
+  "notification": {
+    "notifications": "Notifications",
+    "commented": "{{people}} commented on your photo",
+    "followed": "{{people}} followed you",
+    "liked": "{{people}} like your post {{post}}",
+    "shared": "{{people}} share your post",
+    "add_photo": "{{people}} add a new photo",
+    "add_post": "{{people}} add a new post"
   },
   "friend": {
     "friends": "Friends",

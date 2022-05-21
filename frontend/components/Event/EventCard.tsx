@@ -1,6 +1,7 @@
 import React from 'react'
 import { AvatarGroup } from '../AvatarGroup'
 import { Divider } from '../Divider'
+import { Heading } from '../Heading'
 
 const EventCard = () => {
   return (
@@ -8,7 +9,7 @@ const EventCard = () => {
       <div className="flex items-start">
         <div className="mr-4 h-10 w-10 flex-shrink-0 rounded bg-gray-200"></div>
         <div className="flex flex-col">
-          <h2 className="font-semibold">Graduation Ceremony</h2>
+          <Heading>Graduation Ceremony</Heading>
           <p className="text-sm text-gray-400 line-clamp-2">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque,
             tempora quis error fugit quidem optio. Fugit esse aut ut architecto.

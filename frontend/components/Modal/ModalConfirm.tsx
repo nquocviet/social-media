@@ -2,6 +2,7 @@ import React, { ReactNode, useRef } from 'react'
 import ReactDOM from 'react-dom'
 import { useTranslation } from 'next-i18next'
 import { Button } from '../Button'
+import { Heading } from '../Heading'
 import { useOnClickOutside } from '@/hooks/index'
 
 type TModalConfirmProps = {
@@ -36,7 +37,7 @@ const ModalConfirm = ({
               className="animate-show-down overflow-hidden rounded-xl bg-white py-4 px-6 shadow-lg"
               ref={modalRef}
             >
-              <h2 className="text-center text-xl font-semibold">{title}</h2>
+              <Heading className="text-center text-xl">{title}</Heading>
               <div className="flex flex-col items-stretch">
                 <div className="pt-4 pb-6 text-center">{content}</div>
                 <div className="-mx-3 flex items-stretch">
