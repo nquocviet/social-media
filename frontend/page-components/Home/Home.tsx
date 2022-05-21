@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Main>
-        <div className="mr-layout flex-1">
+        <div className="mr-0 flex-1 xl:mr-layout">
           <NewsFeed />
         </div>
         <WidgetSidebar />

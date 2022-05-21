@@ -24,15 +24,15 @@ const CreatePostArea = () => {
       </div>
       <Divider />
       <div className="flex items-stretch pt-2">
-        <Button color="neutral" variant="text" className="flex-1">
+        <Button color="neutral" variant="text" className="flex-1 px-1">
           <VideoCamera size={24} className="mr-2" />
           {t('post.live')}
         </Button>
-        <Button color="neutral" variant="text" className="flex-1">
+        <Button color="neutral" variant="text" className="flex-1 px-1">
           <Image size={24} className="mr-2" />
           {t('post.photo_video')}
         </Button>
-        <Button color="neutral" variant="text" className="flex-1">
+        <Button color="neutral" variant="text" className="flex-1 px-1">
           <Smiley size={24} className="mr-2" />
           {t('post.feeling')}
         </Button>

@@ -97,7 +97,7 @@
   --z-popover: 500;
   --z-maximum: 9999;
 
-  --su-layout: 1.5rem;
+  --su-layout: 0.75rem;
 
   --header-height: 76px;
   --header-width: calc(100% - var(--sidebar-width));
@@ -169,5 +169,6 @@ body {
 @media screen and (min-width: 968px) {
   :root {
     --ratio: 1;
+    --su-layout: 1.5rem;
   }
 }

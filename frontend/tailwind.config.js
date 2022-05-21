@@ -29,7 +29,7 @@ module.exports = {
       sm: '640px',
       md: '768px',
       lg: '1024px',
-      xl: '1280px',
+      xl: '1320px',
       '2xl': '1536px',
     },
     container: {
@@ -38,7 +38,7 @@ module.exports = {
         md: '728px',
         lg: '984px',
         xl: '1240px',
-        '2xl': '1280px',
+        '2xl': '1320px',
       },
     },
     fontSize: {
