@@ -1,6 +1,10 @@
 {
   "birthdays": "Birthdays",
   "birthday_today": "Birthday today",
+  "followers_one": "{{count}} follower",
+  "followers_other": "{{count}} followers",
+  "following": "{{count}} following",
+  "suggestions": "People you may like",
   "public": "Public",
   "might_like": "You might like",
   "recent_event": "Recent event",
