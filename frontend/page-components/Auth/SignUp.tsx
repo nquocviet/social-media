@@ -7,7 +7,6 @@ import { Heading } from '@/components/Heading'
 import { Input } from '@/components/Input'
 import { Grid } from '@/components/Grid'
 import { GenderInput } from '@/components/GenderInput'
-import Header from './Header'
 import Layout from './Layout'
 import { DatePicker } from '@/components/DatePicker'
 

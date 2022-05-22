@@ -7,7 +7,7 @@ type TLayoutProps = {
 
 const Layout = ({ children }: TLayoutProps) => {
   return (
-    <div className="flex h-screen flex-col items-stretch">
+    <div className="flex h-screen w-full flex-col items-stretch">
       <Header />
       <div className="flex flex-1 justify-center bg-gray-50">
         <div className="mt-8 w-full max-w-[500px] px-4">
