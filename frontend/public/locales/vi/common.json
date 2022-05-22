@@ -9,9 +9,6 @@
   "intro": "Giới thiệu",
   "might_like": "Bạn có thể thích",
   "recent_event": "Sự kiện gần đây",
-  "edit_profile": "Chỉnh sửa thông tin",
-  "social_link": "Liên kết xã hội",
-  "show_language": "Hiển thị Meetmax bằng ngôn ngữ này.",
   "sex": {
     "male": "Nam",
     "female": "Nữ"
@@ -47,7 +44,9 @@
     "add_story": "Thêm vào tin",
     "edit_info": "Chỉnh sửa thông tin",
     "edit_cover": "Chỉnh sửa ảnh bìa",
-    "save_changes": "Lưu thay đổi"
+    "save_changes": "Lưu thay đổi",
+    "follow_back": "Theo dõi lại",
+    "unblock": "Hủy chặn"
   },
   "confirm": {
     "unfollow": "Các tweet của họ sẽ không còn hiển thị trong dòng thời gian trên trang chủ của bạn nữa."
@@ -80,8 +79,9 @@
     "followed": "{{people}} theo dõi bạn",
     "liked": "{{people}} thích bài viết của bạn {{post}}",
     "shared": "{{people}} chia sẻ bài viết của bạn",
-    "add_photo": "{{people}} thêm một ảnh mới",
-    "add_post": "{{people}} thêm một bài viết mới"
+    "mention": "{{people}} nhắc bạn trong {{post}}",
+    "add_post": "{{people}} thêm một bài viết mới",
+    "event": "{{people}} mời bạn trong một sự kiện"
   },
   "friend": {
     "friends": "Bạn bè",
@@ -106,9 +106,10 @@
     "linkedin": "LinkedIn"
   },
   "placeholder": {
-    "search_something": "Tìm kiếm gì đó ở đây...",
-    "search_friends": "Tìm kiếm bạn bè...",
-    "type_something": "Nhập gì đó ở đây...",
+    "search_something": "Tìm kiếm gì đó ở đây",
+    "search_friends": "Tìm kiếm bạn bè",
+    "type_something": "Nhập gì đó ở đây",
+    "type_name": "Nhập tên người dùng",
     "what_happening": "Bạn đang nghĩ gì thế?",
     "congratulation_now": "Chúc mừng ngay",
     "full_name": "John Doe",

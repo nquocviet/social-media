@@ -1,4 +1,11 @@
 {
+  "edit_profile": "Edit profile",
+  "social_link": "Social link",
+  "show_language": "Show Meetmax in this language.",
+  "block_users": "Block users",
+  "block_users_list": "Block users list",
+  "block_description": "One you block someone, that person can no longer see things you post on your timeline, tag you, invite you to events or groups, start a conversation with you, or add you as a friend. Note: Does not include apps, games or groups you both participate in.",
+  "notification_receive": "What notifications you receive",
   "tabs": {
     "edit_profile": "Edit profile",
     "language": "Language",
@@ -7,5 +14,25 @@
     "password_security": "Password & Security",
     "activity_log": "Activity log",
     "viewing_sharing": "Viewing & Sharing"
+  },
+  "notification": {
+    "comment": "Comment",
+    "follow": "Follow",
+    "like": "Like",
+    "share": "Share",
+    "mention": "Mention",
+    "post": "Post",
+    "event": "Event"
+  },
+  "viewing_sharing": {
+    "who_see_post": "Who can see your post?",
+    "who_see_profile": "Who can see your profile?",
+    "allow_share": "Allow others to share your posts to their Timeline?",
+    "who_follow": "Who can follow you?",
+    "everyone": "Everyone",
+    "followers": "Followers",
+    "only_me": "Only me",
+    "on": "On",
+    "off": "Off"
   }
 }

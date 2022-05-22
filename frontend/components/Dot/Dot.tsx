@@ -11,7 +11,7 @@ type TDotProps = {
 
 const dotColors = {
   primary: 'bg-primary-500',
-  neutral: 'bg-neutral-500',
+  neutral: 'bg-neutral-400',
   error: 'bg-red-500',
   warning: 'bg-yellow-500',
   success: 'bg-green-500',

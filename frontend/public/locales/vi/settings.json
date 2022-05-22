@@ -1,4 +1,11 @@
 {
+  "edit_profile": "Chỉnh sửa thông tin",
+  "social_link": "Liên kết xã hội",
+  "show_language": "Hiển thị Meetmax bằng ngôn ngữ này.",
+  "block_users": "Chặn người dùng",
+  "block_users_list": "Danh sách người dùng bị chặn",
+  "block_description": "Một khi bạn chặn ai đó, người đó không còn có thể nhìn thấy những thứ bạn đăng trên dòng thời gian, gắn thẻ bạn, mời bạn tham gia các sự kiện hoặc nhóm, bắt đầu cuộc trò chuyện với bạn hoặc thêm bạn làm bạn. Lưu ý: Không bao gồm các ứng dụng, trò chơi hoặc nhóm mà cả hai bạn đều tham gia.",
+  "notification_receive": "Những thông báo bạn sẽ nhận",
   "tabs": {
     "edit_profile": "Chỉnh sửa thông tin",
     "language": "Ngôn ngữ",
@@ -7,5 +14,25 @@
     "password_security": "Mật khẩu & Bảo mật",
     "activity_log": "Lịch sử hoạt động",
     "viewing_sharing": "Xem & chia sẻ"
+  },
+  "notification": {
+    "comment": "Bình luận",
+    "follow": "Theo dõi",
+    "like": "Thích",
+    "share": "Chia sẻ",
+    "mention": "Nhắc nhở",
+    "post": "Bài viết",
+    "event": "Sự kiện"
+  },
+  "viewing_sharing": {
+    "who_see_post": "Ai có thể xem bài đăng của bạn?",
+    "who_see_profile": "Ai có thể xem hồ sơ của bạn?",
+    "allow_share": "Cho phép người khác chia sẻ bài đăng của bạn lên Dòng thời gian của họ?",
+    "who_follow": "Ai có thể theo dõi bạn?",
+    "everyone": "Mọi người",
+    "followers": "Người theo dõi",
+    "only_me": "Chỉ tôi",
+    "on": "Bật",
+    "off": "Tắt"
   }
 }
