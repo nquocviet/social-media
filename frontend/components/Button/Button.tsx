@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useRef } from 'react'
+import React, { ReactNode, useRef } from 'react'
 import Link, { LinkProps } from 'next/link'
 import clsx from 'clsx'
 
@@ -19,6 +19,7 @@ type TBaseProps = {
   transform?: TButtonTransforms
   fluid?: boolean
   disabled?: boolean
+  square?: boolean
   className?: string
   target?: string
   prefix?: ReactNode
@@ -70,11 +71,19 @@ const buttonVariants = {
       'disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:text-neutral-400 disabled:border-neutral-400',
   },
 }
+
 const buttonSizes = {
   xs: 'px-2.5 py-1',
   sm: 'px-3 py-1.5',
   md: 'px-3.5 py-2.5',
   lg: 'px-4 py-3',
+}
+
+const buttonIconSizes = {
+  xs: 'p-1',
+  sm: 'p-1.5',
+  md: 'p-2.5',
+  lg: 'p-3',
 }
 
 const buttonRounded = {
@@ -101,6 +110,7 @@ const Button = ({
   transform = 'normal',
   fluid,
   disabled = false,
+  square = false,
   className,
   target = '_self',
   prefix,
@@ -108,15 +118,17 @@ const Button = ({
   ...rest
 }: TButtonProps) => {
   const ref = useRef<any>(null)
+  const isAbsolute = className?.includes('absolute')
   const defaultClassName =
-    'relative inline-flex justify-center items-center border outline-none font-semibold transition-all focus:ring-4 disabled:text-gray-500'
+    'inline-flex justify-center items-center border outline-none font-semibold transition-all focus:ring-4 disabled:text-gray-500'
   const allClassNames = clsx(
     defaultClassName,
     className,
+    isAbsolute ? 'absolute' : 'relative',
     buttonVariants[variant][color],
-    buttonSizes[size],
     buttonRounded[rounded],
     buttonTransforms[transform],
+    square ? buttonIconSizes[size] : buttonSizes[size],
     disabled && buttonVariants['disabled'][variant],
     fluid ? 'w-full' : 'w-auto'
   )

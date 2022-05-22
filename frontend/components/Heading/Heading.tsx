@@ -7,7 +7,7 @@ type THeadingProps = {
   className?: string
 }
 
-const Heading = ({ children, level = 1, className }: THeadingProps) => {
+const Heading = ({ children, level = 2, className }: THeadingProps) => {
   const defaultClassName = 'font-bold capitalize'
   const allClassNames = clsx(defaultClassName, className)
   const headingTag = `h${level}`
