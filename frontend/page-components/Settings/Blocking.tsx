@@ -18,7 +18,7 @@ const Blocking = () => {
           placeholder={t('placeholder.type_name')}
           suffix={<MagnifyingGlass size={20} />}
         />
-        <Heading className="my-4">{ts('block_users_list')}</Heading>
+        <Heading className="mt-6 mb-4">{ts('block_users_list')}</Heading>
         <div className="flex flex-col items-stretch">
           {[...Array(6)].map((_, index) => (
             <BlockUser key={index} />

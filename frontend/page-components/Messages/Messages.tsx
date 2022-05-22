@@ -1,6 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
+import { Main } from '@/components/Layout'
+import Conversations from './Conversations'
+import OpenConversation from './OpenConversation'
 
 const Messages = () => {
   const { t } = useTranslation('common')
@@ -10,7 +13,10 @@ const Messages = () => {
       <Head>
         <title>{t('title.messages')} | Meetmax</title>
       </Head>
-      Messages
+      <Main>
+        <Conversations />
+        <OpenConversation />
+      </Main>
     </>
   )
 }

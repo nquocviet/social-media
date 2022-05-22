@@ -19,7 +19,7 @@ const PasswordSecurity = () => {
   return (
     <>
       <Heading className="mb-4 text-lg">{ts('where_logged_in')}</Heading>
-      <div className="mb-4">
+      <div className="mb-6">
         <Grid row={true}>
           {sessions.map((session: any) => (
             <Grid xs={12} column={true}>
@@ -29,7 +29,7 @@ const PasswordSecurity = () => {
         </Grid>
       </div>
       <Heading className="mb-4 text-lg">{ts('change_password')}</Heading>
-      <div className="mb-4 max-w-[480px]">
+      <div className="mb-6 max-w-[480px]">
         <Input size="sm" className="mb-4" label={ts('current_password')} />
         <Input size="sm" className="mb-4" label={ts('new_password')} />
         <Input size="sm" className="mb-4" label={ts('retype_password')} />
