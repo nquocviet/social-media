@@ -30,6 +30,7 @@
     "cancel": "Cancel",
     "confirm": "Confirm",
     "submit": "Submit",
+    "save": "Save",
     "post": "Post",
     "turn_on_notification_post": "Turn on notification for this post",
     "hide_post": "Hide post",
@@ -46,7 +47,8 @@
     "edit_cover": "Edit cover photo",
     "save_changes": "Save changes",
     "follow_back": "Follow back",
-    "unblock": "Unblock"
+    "unblock": "Unblock",
+    "regenerate": "Regenerate"
   },
   "confirm": {
     "unfollow": "Their tweets will no longer show up in your home timeline."

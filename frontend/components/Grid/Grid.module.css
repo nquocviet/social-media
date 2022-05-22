@@ -3,7 +3,7 @@
   flex-flow: row wrap;
   margin-left: calc(0px - var(--grid-spacer));
   margin-right: calc(0px - var(--grid-spacer));
-  row-gap: var(--grid-spacer);
+  row-gap: calc(var(--grid-spacer) * 2);
 }
 
 .row.expanded {
