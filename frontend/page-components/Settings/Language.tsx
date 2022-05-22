@@ -12,6 +12,7 @@ const locales = [
 
 const Language = () => {
   const { t } = useTranslation('common')
+  const { t: ts } = useTranslation('settings')
   const router = useRouter()
   const { locale } = router
   const currentLocale = locales.find(({ value, label }) => value === locale)
@@ -19,9 +20,9 @@ const Language = () => {
   const handleLocaleChange = (locale: string) => {}
 
   return (
-    <div>
+    <>
       <Heading className="mb-4 text-lg">{t('title.language')}</Heading>
-      <p className="mb-4 font-semibold">{t('show_language')}</p>
+      <p className="mb-4 font-semibold">{ts('show_language')}</p>
       <Select
         options={locales}
         className="w-[200px]"
@@ -34,7 +35,7 @@ const Language = () => {
         </Button>
         <Button size="sm">{t('action.save_changes')}</Button>
       </div>
-    </div>
+    </>
   )
 }
 

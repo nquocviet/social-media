@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Calendar,
   Chat,
   Confetti,
   Heart,
@@ -23,8 +24,9 @@ const icons = {
   1: UserCircle,
   2: Heart,
   3: ShareNetwork,
-  4: ImageSquare,
+  4: UserCircle,
   5: Confetti,
+  6: Calendar,
 }
 
 const colors = {
@@ -32,8 +34,9 @@ const colors = {
   1: 'primary',
   2: 'red',
   3: 'yellow',
-  4: 'green',
+  4: 'primary',
   5: 'green',
+  6: 'green',
 }
 
 const messages = {
@@ -41,8 +44,9 @@ const messages = {
   1: 'followed',
   2: 'liked',
   3: 'shared',
-  4: 'add_photo',
+  4: 'mention',
   5: 'add_post',
+  6: 'event',
 }
 
 const Notification = ({ type }: TNotificationProps) => {
@@ -79,7 +83,7 @@ const Notification = ({ type }: TNotificationProps) => {
       </div>
       {type === 1 ? (
         <Button size="sm" className="flex-shrink-0">
-          Follow back
+          {t('action.follow_back')}
         </Button>
       ) : (
         <Dot color="error" size={8} />

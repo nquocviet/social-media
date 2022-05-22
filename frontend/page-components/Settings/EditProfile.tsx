@@ -12,12 +12,13 @@ import UserAvatar from '@/public/images/user-avatar.webp'
 
 const EditProfile = () => {
   const { t } = useTranslation('common')
+  const { t: ts } = useTranslation('settings')
   const [birthday, setBirthday] = useState(new Date())
   const [gender, setGender] = useState('0')
 
   return (
-    <div>
-      <Heading className="mb-4 text-lg">{t('edit_profile')}</Heading>
+    <>
+      <Heading className="mb-4 text-lg">{ts('edit_profile')}</Heading>
       <div className="relative mb-6 inline-block">
         <Avatar
           size={120}
@@ -98,7 +99,7 @@ const EditProfile = () => {
           />
         </Grid>
       </Grid>
-      <Heading className="mt-8 mb-4 text-lg">{t('edit_profile')}</Heading>
+      <Heading className="mt-8 mb-4 text-lg">{ts('social_link')}</Heading>
       <Grid spacer={24} row={true}>
         <Grid xs={12} sm={6} column={true}>
           <Input
@@ -135,7 +136,7 @@ const EditProfile = () => {
         </Button>
         <Button size="sm">{t('action.save_changes')}</Button>
       </div>
-    </div>
+    </>
   )
 }
 
