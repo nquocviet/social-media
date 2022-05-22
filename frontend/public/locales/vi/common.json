@@ -30,6 +30,7 @@
     "cancel": "Hủy bỏ",
     "confirm": "Xác nhận",
     "submit": "Gửi đi",
+    "save": "Lưu",
     "post": "Đăng",
     "turn_on_notification_post": "Bật thông báo cho bài viết này",
     "hide_post": "Ẩn bài viết",
@@ -46,7 +47,8 @@
     "edit_cover": "Chỉnh sửa ảnh bìa",
     "save_changes": "Lưu thay đổi",
     "follow_back": "Theo dõi lại",
-    "unblock": "Hủy chặn"
+    "unblock": "Hủy chặn",
+    "regenerate": "Tạo mới"
   },
   "confirm": {
     "unfollow": "Các tweet của họ sẽ không còn hiển thị trong dòng thời gian trên trang chủ của bạn nữa."
