@@ -16,7 +16,6 @@ import Language from './Language'
 import Blocking from './Blocking'
 import Notification from './Notification'
 import PasswordSecurity from './PasswordSecurity'
-import ActivityLog from './ActivityLog'
 import ViewingSharing from './ViewingSharing'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
@@ -81,13 +80,6 @@ const Settings = () => {
               label={t('tabs.password_security')}
             >
               <PasswordSecurity />
-            </Tab>
-            <Tab
-              id="activity_log"
-              icon={<ClockClockwise size={20} />}
-              label={t('tabs.activity_log')}
-            >
-              <ActivityLog />
             </Tab>
             <Tab
               id="viewing_sharing"
