@@ -6,6 +6,7 @@
   "following": "{{count}} đang theo dõi",
   "suggestions": "Những người bạn có thể biết",
   "public": "Công khai",
+  "intro": "Giới thiệu",
   "might_like": "Bạn có thể thích",
   "recent_event": "Sự kiện gần đây",
   "sex": {
@@ -39,7 +40,10 @@
     "unfollow": "Hủy theo dõi",
     "unfollow_people": "Hủy theo dõi {{people}}",
     "ignore": "Bỏ qua",
-    "see_all": "Xem tất cả"
+    "see_all": "Xem tất cả",
+    "add_story": "Thêm vào tin",
+    "edit_info": "Chỉnh sửa thông tin",
+    "edit_cover": "Chỉnh sửa ảnh bìa"
   },
   "confirm": {
     "unfollow": "Các tweet của họ sẽ không còn hiển thị trong dòng thời gian trên trang chủ của bạn nữa."

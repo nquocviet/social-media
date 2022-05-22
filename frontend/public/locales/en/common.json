@@ -6,6 +6,7 @@
   "following": "{{count}} following",
   "suggestions": "People you may like",
   "public": "Public",
+  "intro": "Intro",
   "might_like": "You might like",
   "recent_event": "Recent event",
   "sex": {
@@ -39,7 +40,10 @@
     "unfollow": "Unfollow",
     "unfollow_people": "Unfollow {{people}}",
     "ignore": "Ignore",
-    "see_all": "See all"
+    "see_all": "See all",
+    "add_story": "Add to story",
+    "edit_info": "Edit basic info",
+    "edit_cover": "Edit cover photo"
   },
   "confirm": {
     "unfollow": "Their tweets will no longer show up in your home timeline."
