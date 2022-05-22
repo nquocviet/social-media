@@ -9,6 +9,9 @@
   "intro": "Intro",
   "might_like": "You might like",
   "recent_event": "Recent event",
+  "edit_profile": "Edit profile",
+  "social_link": "Social link",
+  "show_language": "Show Meetmax in this language.",
   "sex": {
     "male": "Male",
     "female": "Female"
@@ -43,7 +46,8 @@
     "see_all": "See all",
     "add_story": "Add to story",
     "edit_info": "Edit basic info",
-    "edit_cover": "Edit cover photo"
+    "edit_cover": "Edit cover photo",
+    "save_changes": "Save changes"
   },
   "confirm": {
     "unfollow": "Their tweets will no longer show up in your home timeline."
@@ -87,16 +91,56 @@
     "mutual_friends_one": "{{count}} mutual friends",
     "mutual_friends_other": "{{count}} mutual friends"
   },
+  "input": {
+    "full_name": "Full name",
+    "birthday": "Birthday",
+    "email": "Email",
+    "bio": "Bio",
+    "phone_number": "Phone number",
+    "website": "Website",
+    "gender": "Gender",
+    "location": "Location",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
   "placeholder": {
     "search_something": "Search for something here...",
     "search_friends": "Search friends...",
     "type_something": "Type something here...",
     "what_happening": "What's happening?",
-    "congratulation_now": "Congratulation now"
+    "congratulation_now": "Congratulation now",
+    "full_name": "John Doe",
+    "birthday": "01/01/1999",
+    "email": "johndoe@gmail.com",
+    "bio": "UI/UX Designer",
+    "phone_number": "+52 534 532 325",
+    "website": "https://john-doe.com",
+    "location": "02 Incognita, Brooklyn",
+    "facebook": "https://www.facebook.com/john-doe",
+    "twitter": "https://www.twitter.com/john-doe",
+    "instagram": "https://www.instagram.com/john-doe",
+    "linkedin": "https://www.linkedin.com/john-doe"
   },
   "option": {
     "friends": "Friends",
     "public": "Public",
     "only_me": "Only me"
+  },
+  "title": {
+    "messages": "Messages",
+    "notifications": "Notifications",
+    "explore": "Explore",
+    "suggestions": "Suggestions",
+    "followers": "Followers",
+    "following": "Following",
+    "edit_profile": "Edit profile",
+    "language": "Language",
+    "blocking": "Blocking",
+    "notification": "Notification",
+    "password_security": "Password and Security",
+    "activity_log": "Activity log",
+    "viewing_sharing": "Viewing and Sharing"
   }
 }

@@ -4,12 +4,16 @@ import { FriendList, Main, Section } from '@/components/Layout'
 import { Heading } from '@/components/Heading'
 import { Divider } from '@/components/Divider'
 import { Notification } from '@/components/Notification'
+import Head from 'next/head'
 
 const Notifications = () => {
   const { t } = useTranslation('common')
 
   return (
     <>
+      <Head>
+        <title>{t('title.notifications')} | Meetmax</title>
+      </Head>
       <Main>
         <div className="flex w-full flex-col items-stretch">
           <Section className="w-full">

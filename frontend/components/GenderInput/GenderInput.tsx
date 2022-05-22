@@ -56,10 +56,10 @@ const GenderInput = ({
         <div className="text-base mb-1 w-full font-semibold">{label}</div>
       )}
       <div className={allClassNames} tabIndex={0}>
-        <div className="flex w-full items-stretch">
+        <div className="flex w-full items-stretch py-0.5">
           {prefix && <span className="mr-2">{prefix}</span>}
-          <div className="-mb-0.5 flex flex-1 items-end text-sm font-semibold">
-            <div className="flex-1 text-center">
+          <div className="flex flex-1 items-stretch text-sm font-semibold">
+            <div className="inline-flex flex-1 items-center justify-center">
               <Radio
                 checked={selected === '0'}
                 name="gender"
@@ -68,7 +68,7 @@ const GenderInput = ({
                 onChange={onChange}
               />
             </div>
-            <div className="flex-1 text-center">
+            <div className="inline-flex flex-1 items-center justify-center">
               <Radio
                 checked={selected === '1'}
                 name="gender"

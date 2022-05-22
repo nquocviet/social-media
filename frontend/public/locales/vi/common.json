@@ -9,6 +9,9 @@
   "intro": "Giới thiệu",
   "might_like": "Bạn có thể thích",
   "recent_event": "Sự kiện gần đây",
+  "edit_profile": "Chỉnh sửa thông tin",
+  "social_link": "Liên kết xã hội",
+  "show_language": "Hiển thị Meetmax bằng ngôn ngữ này.",
   "sex": {
     "male": "Nam",
     "female": "Nữ"
@@ -43,13 +46,14 @@
     "see_all": "Xem tất cả",
     "add_story": "Thêm vào tin",
     "edit_info": "Chỉnh sửa thông tin",
-    "edit_cover": "Chỉnh sửa ảnh bìa"
+    "edit_cover": "Chỉnh sửa ảnh bìa",
+    "save_changes": "Lưu thay đổi"
   },
   "confirm": {
     "unfollow": "Các tweet của họ sẽ không còn hiển thị trong dòng thời gian trên trang chủ của bạn nữa."
   },
   "issues": {
-    "report": "Report an issue",
+    "report": "Báo cáo bài viết",
     "it_spam": "Đây là tin rác",
     "nudity_sexual": "Khoả thân hoặc hoạt động tình dục",
     "false_information": "Thông tin sai lệch",
@@ -64,7 +68,7 @@
     "feed": "Trang chủ",
     "community": "Cộng đồng",
     "messages": "Tin nhắn",
-    "notification": "Thông báo",
+    "notifications": "Thông báo",
     "explore": "Khám phá",
     "profile": "Trang cá nhân",
     "settings": "Cài đặt",
@@ -87,16 +91,56 @@
     "mutual_friends_one": "{{count}} bạn chung",
     "mutual_friends_other": "{{count}} bạn chung"
   },
+  "input": {
+    "full_name": "Họ và tên",
+    "birthday": "Ngày sinh",
+    "email": "Email",
+    "bio": "Tiểu sử",
+    "phone_number": "Số điện thoại",
+    "website": "Website",
+    "gender": "Giới tính",
+    "location": "Quê quán",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
   "placeholder": {
     "search_something": "Tìm kiếm gì đó ở đây...",
     "search_friends": "Tìm kiếm bạn bè...",
     "type_something": "Nhập gì đó ở đây...",
     "what_happening": "Bạn đang nghĩ gì thế?",
-    "congratulation_now": "Chúc mừng ngay"
+    "congratulation_now": "Chúc mừng ngay",
+    "full_name": "John Doe",
+    "birthday": "01/01/1999",
+    "email": "johndoe@gmail.com",
+    "bio": "UI/UX Designer",
+    "phone_number": "+52 534 532 325",
+    "website": "https://john-doe.com",
+    "location": "02 Incognita, Brooklyn",
+    "facebook": "https://www.facebook.com/john-doe",
+    "twitter": "https://www.twitter.com/john-doe",
+    "instagram": "https://www.instagram.com/john-doe",
+    "linkedin": "https://www.linkedin.com/john-doe"
   },
   "option": {
     "friends": "Bạn bè",
     "public": "Công khai",
     "only_me": "Chỉ mình tôi"
+  },
+  "title": {
+    "messages": "Tin nhắn",
+    "notifications": "Thông báo",
+    "explore": "Khám phá",
+    "suggestions": "Những người bạn có thể biết",
+    "followers": "Người theo dõi",
+    "following": "Đang theo dõi",
+    "edit_profile": "Chỉnh sửa thông tin",
+    "language": "Ngôn ngữ",
+    "blocking": "Chặn",
+    "notification": "Thông báo",
+    "password_security": "Mật khẩu và Bảo mật",
+    "activity_log": "Lịch sử hoạt động",
+    "viewing_sharing": "Xem và chia sẻ"
   }
 }

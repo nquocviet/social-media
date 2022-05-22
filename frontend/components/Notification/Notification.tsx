@@ -55,9 +55,10 @@ const Notification = ({ type }: TNotificationProps) => {
         <div className="relative mr-4">
           <Avatar size={40} src={UserAvatar.src} alt="user avatar" />
           <span
-            className={`absolute bottom-0 right-0 inline-block translate-x-1/4 translate-y-1/4 rounded-full p-1 bg-${
-              (colors as any)[type]
-            }-100`}
+            className="absolute bottom-0 right-0 inline-block translate-x-1/4 translate-y-1/4 rounded-full p-1"
+            style={{
+              backgroundColor: `var(--${(colors as any)[type]}-100)`,
+            }}
           >
             <Icon
               weight="fill"

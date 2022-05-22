@@ -1,0 +1,11 @@
+{
+  "tabs": {
+    "edit_profile": "Edit profile",
+    "language": "Language",
+    "blocking": "Blocking",
+    "notification": "Notification",
+    "password_security": "Password & Security",
+    "activity_log": "Activity log",
+    "viewing_sharing": "Viewing & Sharing"
+  }
+}

@@ -17,6 +17,7 @@ import { useTranslation } from 'next-i18next'
 import { Logo } from '../Logo'
 import { useUiContext } from '@/context/ui'
 import { useOnClickOutside } from '@/hooks/index'
+import { comparePath } from '@/helpers/helpers'
 
 const navItems = [
   {
@@ -52,9 +53,10 @@ const navItems = [
     icon: User,
   },
   {
-    slug: '/settings',
+    slug: '/settings?tab=edit_profile',
     label: 'settings',
     icon: Gear,
+    includePath: true,
   },
 ]
 
@@ -93,7 +95,7 @@ const Sidebar = () => {
               {navItems.map((navItem, index) => {
                 const { slug, label, icon: Icon, includePath } = navItem
                 const isActive = includePath
-                  ? router.asPath.split('/')[1] === slug.split('/')[1]
+                  ? comparePath(router.asPath, slug)
                   : router.asPath === slug
 
                 return (
