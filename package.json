@@ -1,0 +1,44 @@
+{
+  "name": "social-media",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.14.0",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/node": "17.0.33",
+    "@types/react": "18.0.9",
+    "@types/react-datepicker": "^4.4.1",
+    "@types/react-dom": "^18.0.4",
+    "autoprefixer": "^10.4.7",
+    "bcryptjs": "^2.4.3",
+    "clsx": "^1.1.1",
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6",
+    "framer-motion": "^6.3.3",
+    "next-i18next": "^11.0.0",
+    "phosphor-react": "^1.4.1",
+    "postcss": "^8.4.5",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.10",
+    "prisma": "^3.14.0",
+    "react-datepicker": "^4.8.0",
+    "react-final-form": "^6.5.9",
+    "resize-observer-polyfill": "^1.5.1",
+    "swr": "^1.3.0",
+    "tailwindcss": "^3.0.24",
+    "ts-node": "^10.8.0",
+    "typescript": "4.6.4"
+  }
+}
