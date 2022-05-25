@@ -1,7 +1,10 @@
 import React, { FormEvent, forwardRef, ReactNode, useState } from 'react'
 import { Eye, EyeSlash, Info } from 'phosphor-react'
 import clsx from 'clsx'
-import { Tooltip } from '@/components/Tooltip'
+import { useTranslation } from 'next-i18next'
+import { useErrorContext } from '@/context/error'
+import { Tooltip } from '../Tooltip'
+import { Error } from '../Error'
 
 const MAX_LENGTH_INPUT = 64
 
@@ -14,6 +17,8 @@ type TInputProps = {
   size?: TInputSizes
   rounded?: TInputRounded
   label?: string
+  value: string
+  name?: string
   placeholder?: string
   className?: string
   error?: string
@@ -45,6 +50,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
       size = 'md',
       rounded = 'lg',
       label,
+      name,
       placeholder,
       className,
       error,
@@ -68,6 +74,16 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
     )
     const [showPassword, setShowPassword] = useState<boolean>(false)
     const isInputPassword = type === 'password'
+    const { t } = useTranslation('validate')
+    const [errors, setErrors] = useErrorContext()
+
+    const onKeyDown = () => {
+      if (Object.keys(errors).length) {
+        const { [name as string]: error, ...rest } = errors
+
+        setErrors(rest)
+      }
+    }
 
     return (
       <label className="block w-full text-left">
@@ -92,6 +108,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
               autoComplete="off"
               autoCorrect="off"
               autoCapitalize="off"
+              onKeyDown={onKeyDown}
               spellCheck="false"
               placeholder={placeholder}
               readOnly={readOnly}
@@ -117,6 +134,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
             )}
           </div>
         </div>
+        {error && <Error error={t(error)} className="-mb-2 pt-1" />}
       </label>
     )
   }

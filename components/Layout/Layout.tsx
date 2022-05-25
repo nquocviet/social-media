@@ -1,5 +1,7 @@
+import React, { ReactNode, useEffect } from 'react'
 import Head from 'next/head'
-import React, { ReactNode } from 'react'
+import { useRouter } from 'next/router'
+import { useErrorContext } from '@/context/error'
 import Header from './Header'
 import Sidebar from './Sidebar'
 
@@ -8,7 +10,14 @@ type TLayoutProps = {
 }
 
 const Layout = ({ children }: TLayoutProps) => {
+  const router = useRouter()
+  const [_, setErrors] = useErrorContext()
   const isAuth = false
+
+  useEffect(() => {
+    setErrors({})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.asPath])
 
   return (
     <>

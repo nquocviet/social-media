@@ -9,6 +9,8 @@
   "intro": "Giới thiệu",
   "might_like": "Bạn có thể thích",
   "recent_event": "Sự kiện gần đây",
+  "terms": "Điều khoản dịch vụ",
+  "policy": "Chính sách bảo mật",
   "gender": {
     "male": "Nam",
     "female": "Nữ"
@@ -48,7 +50,8 @@
     "save_changes": "Lưu thay đổi",
     "follow_back": "Theo dõi lại",
     "unblock": "Hủy chặn",
-    "regenerate": "Tạo mới"
+    "regenerate": "Tạo mới",
+    "accept_terms": "Tôi đồng ý với tất cả <1>Điều khoản dịch vụ</1> và <1>Chính sách bảo mật</1>"
   },
   "confirm": {
     "unfollow": "Các tweet của họ sẽ không còn hiển thị trong dòng thời gian trên trang chủ của bạn nữa."

@@ -1,0 +1,23 @@
+{
+  "email": {
+    "is_email": "Địa chỉ email không hợp lệ.",
+    "min": "Email phải dài ít nhất 8 ký tự.",
+    "max": "Email phải dài dưới hoặc bằng 255 ký tự.",
+    "empty": "Email không được phép để trống."
+  },
+  "username": {
+    "min": "Tên người dùng phải dài ít nhất 6 ký tự.",
+    "max": "Tên người dùng phải dài hơn hoặc bằng 24 ký tự.",
+    "empty": "Tên người dùng không được phép để trống."
+  },
+  "password": {
+    "min": "Mật khẩu phải dài ít nhất 8 ký tự.",
+    "max": "Mật khẩu phải dài hơn hoặc bằng 24 ký tự.",
+    "empty": "Mật khẩu không được phép để trống."
+  },
+  "birthday": {
+    "base": "Ngày sinh phải là một ngày hợp lệ.",
+    "empty": "Không được phép để trống ngày sinh.",
+    "max": "Bạn không thể là nhà du hành thời gian, đúng không?"
+  }
+}

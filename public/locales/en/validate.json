@@ -1,0 +1,23 @@
+{
+  "email": {
+    "is_email": "Not a valid email address.",
+    "min": "Email must be at least 8 characters long.",
+    "max": "Email must be less than or equal to 255 characters long.",
+    "empty": "Email is not allowed to be empty."
+  },
+  "username": {
+    "min": "Username must be at least 6 characters long.",
+    "max": "Username must be less than or equal to 24 characters long.",
+    "empty": "Username is not allowed to be empty."
+  },
+  "password": {
+    "min": "Password must be at least 8 characters long.",
+    "max": "Password must be less than or equal to 24 characters long.",
+    "empty": "Password is not allowed to be empty."
+  },
+  "birthday": {
+    "base": "Birthday must be a valid date.",
+    "empty": "Birthday is not allowed to be empty.",
+    "max": "You cannot be a time traveler, right?"
+  }
+}

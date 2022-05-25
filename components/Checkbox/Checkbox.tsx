@@ -1,9 +1,10 @@
+import { ReactElement } from 'react'
 import clsx from 'clsx'
 
 type TLabelPlacement = 'start' | 'end' | 'top' | 'bottom'
 
 type TCheckboxProps = {
-  label?: string
+  label?: string | ReactElement
   labelPlacement?: TLabelPlacement
   size?: number
   className?: string
@@ -50,7 +51,7 @@ const Checkbox = ({
   return (
     <label
       className={clsx(
-        'inline-flex select-none items-center',
+        'inline-flex select-none',
         labelPlacementStyles[labelPlacement],
         disabled ? 'cursor-not-allowed' : 'cursor-pointer',
         containerClassName
@@ -68,7 +69,7 @@ const Checkbox = ({
         disabled={disabled}
         {...rest}
       />
-      {label && <span className="ml-3 -mt-0.5">{label}</span>}
+      {label && <span className="ml-3 -mt-1 text-left">{label}</span>}
     </label>
   )
 }

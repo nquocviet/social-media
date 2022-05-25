@@ -9,6 +9,8 @@
   "intro": "Intro",
   "might_like": "You might like",
   "recent_event": "Recent event",
+  "terms": "Terms of service",
+  "policy": "Privacy Policy",
   "gender": {
     "male": "Male",
     "female": "Female"
@@ -48,7 +50,8 @@
     "save_changes": "Save changes",
     "follow_back": "Follow back",
     "unblock": "Unblock",
-    "regenerate": "Regenerate"
+    "regenerate": "Regenerate",
+    "accept_terms": "I agree to all the <1>Terms of service</1> and <1>Privacy Policy</1>"
   },
   "confirm": {
     "unfollow": "Their tweets will no longer show up in your home timeline."
